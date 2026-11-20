@@ -1,0 +1,58 @@
+{
+  "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+  "photos": [
+    {
+      "file": "photo-m187311853-1200.webp",
+      "files": [
+        "photo-m187311853-1200.webp"
+      ],
+      "id": "m187311853",
+      "alt": "A barista's hands tamping ground coffee in a portafilter beside an espresso machine",
+      "by": "Shixart1985",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Barista_prepares_espresso_at_coffee_shop.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-m33603672-1200.webp",
+      "files": [
+        "photo-m33603672-1200.webp"
+      ],
+      "id": "m33603672",
+      "alt": "Rye loaves seeded with caraway on the stone floor of an open bread oven, iron doors either side",
+      "by": "Johann Jaritz",
+      "licence": "CC BY-SA 3.0 AT",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en/",
+      "page": "https://commons.wikimedia.org/wiki/File:Stabentheiner_Hof_Brotbackstube_Brotbacken_12062014_224.JPG",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-m61777177-960.jpg",
+      "files": [
+        "photo-m61777177-500.jpg",
+        "photo-m61777177-960.jpg"
+      ],
+      "id": "m61777177",
+      "alt": "Stack of folded wool blankets, grey, lime and pale knit, on a dark wooden table in warm light",
+      "by": "Kelly Sikkema",
+      "licence": "CC0",
+      "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "page": "https://commons.wikimedia.org/wiki/File:Kelly_Sikkema_2016-03-09_(Unsplash).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-m183016636-1200.webp",
+      "files": [
+        "photo-m183016636-1200.webp"
+      ],
+      "id": "m183016636",
+      "alt": "Close-up of leucadendron buds opening, fluffy and striped copper and green, standing in a black florist's bucket",
+      "by": "Leo219",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "page": "https://commons.wikimedia.org/wiki/File:Buds_and_flowers_of_Leucadendron_Plumosum_in_a_black_bucket.jpg",
+      "source": "Wikimedia Commons"
+    }
+  ]
+}
