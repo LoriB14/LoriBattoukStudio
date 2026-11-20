@@ -1,0 +1,26 @@
+[
+  {
+    "q": "What kind of websites do you build?",
+    "a": "Custom-made websites for small businesses, including clinics, salons, restaurants, shops and personal portfolios. I can also add an online store with Stripe checkout, online booking, and an AI assistant that guides visitors to the right product or service."
+  },
+  {
+    "q": "Do you work with businesses outside Toronto?",
+    "a": "Yes. I'm based in Toronto and work with businesses across the GTA, including Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville and Aurora. Everything can be done remotely, so I can work with you wherever you are."
+  },
+  {
+    "q": "How much does a website cost?",
+    "a": "Every project is quoted after a free call, based on what your business needs. A simple custom website costs less than one with an online store, booking and an AI assistant, and you'll know the full price before any work starts."
+  },
+  {
+    "q": "Can you add online booking or a store to my existing website?",
+    "a": "Usually, yes. I can add online booking, an online store or an AI assistant to a site you already have, or rebuild it if that makes more sense. We'll look at your current site on the first call."
+  },
+  {
+    "q": "What is an AI assistant on a website?",
+    "a": "It's a chat assistant on your site that knows your products and services. It answers common questions, recommends the right item or service to each visitor, and sends leads to your inbox. The ones I build are powered by Google Gemini."
+  },
+  {
+    "q": "Will I be able to update the website myself?",
+    "a": "Yes. When your site launches I show you how to update it yourself, such as changing text, photos and products, so you don't need to call a developer for small changes."
+  }
+]

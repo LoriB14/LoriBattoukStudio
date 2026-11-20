@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Process from './components/Process';
 import About from './components/About';
 import Contact from './components/Contact';
+import Faq from './components/Faq';
 import { scrollToId, startMotion } from './motion';
 import type { ServiceId } from './data';
 
@@ -41,12 +42,13 @@ export default function App() {
         <Services />
         <Process />
         <About />
+        <Faq />
         <Contact picked={picked} setPicked={setPicked} business={business} setBusiness={setBusiness} />
       </main>
       <footer className="footer">
         <div className="wrap">
           <div className="footer-row">
-            <span>© 2026 Lori Battouk · Web design and development in Toronto</span>
+            <span>© 2026 Lori Battouk · Web design and development in Toronto and the GTA</span>
             <nav aria-label="Social">
               <a href="https://github.com/LoriB14" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/loribattouk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
