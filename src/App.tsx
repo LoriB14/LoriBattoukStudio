@@ -63,12 +63,14 @@ export default function App() {
             ))}
           </p>
         </div>
+        <div className="wordmark-clip">
         <div className="wordmark" data-reveal aria-hidden="true">
           {WORDMARK.split('').map((ch, i) => (
             <span key={i} style={{ ['--i' as string]: i } as CSSProperties}>
               {ch === ' ' ? ' ' : ch}
             </span>
           ))}
+        </div>
         </div>
       </footer>
     </>

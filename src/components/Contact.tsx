@@ -3,7 +3,7 @@ import Lines from './Lines';
 import { SERVICES, SERVICE_ORDER, type ServiceId } from '../data';
 import { Arrow } from './Icons';
 
-const EMAIL = 'lbattouk@gmail.com';
+const EMAIL = 'info@lorisworld.com';
 
 type Props = {
   picked: ServiceId[];

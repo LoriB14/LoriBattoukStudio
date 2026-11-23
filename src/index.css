@@ -384,7 +384,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .sent .textbtn { margin-top: 22px; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--forest-deep); padding-top: clamp(64px, 8vw, 120px); overflow: hidden; }
+.footer { background: var(--forest-deep); padding-top: clamp(64px, 8vw, 120px); }
+.wordmark-clip { overflow: hidden; }
 .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: var(--cream-3); }
 .footer-row nav { display: flex; gap: 24px; }
 .footer-row a { color: var(--cream-2); text-decoration: none; transition: color 200ms; }

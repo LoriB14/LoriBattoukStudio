@@ -18,9 +18,6 @@ export default function About() {
             I’m a web designer and frontend developer in <strong>Toronto and the GTA</strong>. I work with small businesses to make websites that match
             the quality of their work: clean, fast and built to last.
           </p>
-          <p className="fade-up" style={{ ['--d' as string]: '80ms' }}>
-            I’m also a computer science student.
-          </p>
           <ul className="tools fade-up" style={{ ['--d' as string]: '160ms' }} aria-label="Tools I build with">
             {TOOLS.map((s) => (
               <li key={s}>{s}</li>
