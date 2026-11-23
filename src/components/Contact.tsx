@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent, useRef } from 'react';
 import Lines from './Lines';
 import { SERVICES, SERVICE_ORDER, type ServiceId } from '../data';
 import { Arrow } from './Icons';
@@ -16,12 +16,14 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; email?: string; form?: string }>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const nameRef = useRef<string>('');
 
   const toggle = (id: ServiceId) => setPicked(picked.includes(id) ? picked.filter((p) => p !== id) : [...picked, id]);
 
-  const submit = (e: FormEvent) => {
+  const submit = async (e: FormEvent) => {
     e.preventDefault();
     const next: typeof errors = {};
     if (!name.trim()) next.name = 'Add your name so I know who to reply to.';
@@ -30,12 +32,21 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
     if (Object.keys(next).length) return;
 
     const needs = picked.map((p) => SERVICES[p].name).join(', ') || 'Not sure yet';
-    const subject = encodeURIComponent(`New project inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nBusiness: ${business || '-'}\nInterested in: ${needs}\n\n${message}`,
-    );
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-    setSent(true);
+    nameRef.current = name;
+    setSending(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, business, needs, message }),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setErrors({ form: 'Something went wrong. Email me directly at ' + EMAIL + '.' });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -43,7 +54,7 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
       <div className="wrap contact">
         <div className="section-head" data-reveal>
           <h2 id="contact-h">
-            <Lines lines={["Let’s build", 'yours.']} />
+            <Lines lines={["Let's build", 'yours.']} />
           </h2>
           <p className="fade-up">Send a few lines about what you have in mind. I read every message myself and reply with next steps.</p>
           <p className="direct fade-up" style={{ ['--d' as string]: '80ms' }}>
@@ -54,8 +65,8 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
         <div className="panel form-panel">
           {sent ? (
             <div className="sent" aria-live="polite">
-              <h3>Thanks, {name.split(' ')[0]}.</h3>
-              <p>Your email app should open with your message ready to send. If it didn’t, email me at {EMAIL}.</p>
+              <h3>Thanks, {nameRef.current.split(' ')[0]}.</h3>
+              <p>Your message is on its way. I&apos;ll reply within a day or two.</p>
               <button type="button" className="textbtn" onClick={() => setSent(false)}>
                 Edit my message
               </button>
@@ -97,10 +108,11 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
                 <label htmlFor="f-msg">
                   Tell me more <small>(optional)</small>
                 </label>
-                <textarea id="f-msg" rows={4} placeholder="What you sell, who your customers are, and anything you’d like the site to do." value={message} onChange={(e) => setMessage(e.target.value)} />
+                <textarea id="f-msg" rows={4} placeholder="What you sell, who your customers are, and anything you'd like the site to do." value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
-              <button type="submit" className="btn">
-                Send my inquiry <Arrow />
+              {errors.form && <p className="err">{errors.form}</p>}
+              <button type="submit" className="btn" disabled={sending}>
+                {sending ? 'Sending…' : <><span>Send my inquiry</span> <Arrow /></>}
               </button>
             </form>
           )}
