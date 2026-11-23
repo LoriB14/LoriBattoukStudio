@@ -391,7 +391,7 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .footer-row a { color: var(--cream-2); text-decoration: none; transition: color 200ms; }
 @media (hover: hover) and (pointer: fine) { .footer-row a:hover { color: var(--cream); } }
 .credits { margin-top: 10px; font-size: 12px; color: var(--cream-3); }
-.wordmark { margin-top: clamp(40px, 6vw, 80px); font-weight: 900; font-stretch: 125%; letter-spacing: -0.06em; line-height: 0.78; font-size: clamp(3.4rem, 15.4vw, 15rem); color: var(--forest-2); white-space: nowrap; display: flex; justify-content: center; }
+.wordmark { margin-top: clamp(40px, 6vw, 80px); font-weight: 900; font-stretch: 125%; letter-spacing: -0.06em; line-height: 0.78; font-size: clamp(2.4rem, 11vw, 15rem); color: var(--forest-2); white-space: nowrap; display: flex; justify-content: center; }
 .wordmark span { display: inline-block; transform: translateY(60%); transition: transform 1100ms var(--ease-expo); transition-delay: calc(var(--i) * 40ms); }
 .wordmark.is-in span { transform: translateY(12%); }
 @media (prefers-reduced-motion: reduce) { .wordmark span { transform: translateY(12%); transition: none; } }

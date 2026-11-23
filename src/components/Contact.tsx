@@ -68,7 +68,7 @@ export default function Contact({ picked, setPicked, business, setBusiness }: Pr
               <h3>Thanks, {nameRef.current.split(' ')[0]}.</h3>
               <p>Your message is on its way. I&apos;ll reply within a day or two.</p>
               <button type="button" className="textbtn" onClick={() => setSent(false)}>
-                Edit my message
+                Send another message
               </button>
             </div>
           ) : (
