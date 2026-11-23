@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import LogoMark from './LogoMark';
 
 export default function Nav() {
   const [solid, setSolid] = useState(false);
@@ -22,6 +23,9 @@ export default function Nav() {
     <div className={`topbar${solid ? ' solid' : ''}${hide ? ' hide' : ''}`}>
       <div className="wrap">
         <a href="#top" className="brand">
+          <span className="nav-mark">
+            <LogoMark size={22} color="var(--forest-deep)" animated />
+          </span>
           Lori Battouk
         </a>
         <nav className="nav" aria-label="Main">
